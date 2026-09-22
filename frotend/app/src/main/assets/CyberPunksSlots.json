@@ -1,0 +1,11 @@
+{
+"GameName": "CyberPunkSlots",
+"ProviderName": "Playtech",
+"Stars": 5,
+"NoOfVotes": 210,
+"GameLogo": "GameLogos/cyber_slots.png",
+"MinBet": 5.0,
+"MaxBet": 100.0,
+"RiskLevel": "High",
+"HashKey": "neon_night_42"
+}
