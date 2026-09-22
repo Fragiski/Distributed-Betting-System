@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.CasinoApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#D4AF37</item>
+        <item name="colorOnPrimary">#0A192F</item>
+
+        <item name="android:windowBackground">#0A192F</item>
+        <item name="android:navigationBarColor">#0A192F</item>
+        <item name="android:statusBarColor">#0A192F</item>
+
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#B0C4DE</item>
+    </style>
+
+    <style name="Theme.CasinoApp" parent="Base.Theme.CasinoApp" />
+
+    <style name="CasinoPopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:itemBackground">#112240</item> <item name="android:textColorPrimary">#F0E68C</item>
+    </style>
+
+    <style name="CasinoMenuTextAppearance" parent="TextAppearance.AppCompat.Widget.PopupMenu.Large">
+        <item name="android:textColor">#F0E68C</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    // CasinoDialogTheme
+    <style name="CasinoDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+        <item name="android:textColorPrimary">#D4AF37</item>
+        <item name="colorAccent">#D4AF37</item>
+        <item name="android:textColor">#F0E68C</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
+    </style>
+
+    <style name="DialogButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">#F0E68C</item> <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+    // For calendar
+    <style name="MyDatePickerStyle" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="android:headerBackground">#000000</item> <item name="android:numbersTextColor">#dedace</item> <item name="android:colorAccent">#020a1c</item>
+        <item name="android:windowBackground">@drawable/rounded_datepicker_bg</item>
+
+        <item name="colorAccent">#3B82F6</item>
+
+        <item name="android:textColorPrimary">#dedace</item>
+        <item name="android:textColorSecondary">#94A3B8</item>
+
+        <item name="android:windowMinWidthMinor">70%</item>
+        <item name="android:windowMinWidthMajor">70%</item>
+
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/CustomButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/CustomButtonStyle</item>
+    </style>
+
+    <style name="MyRoundedDialog" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="android:windowBackground">@drawable/rounded_datepicker_bg</item>
+    </style>
+
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">#dedace</item> <item name="android:textStyle">bold</item>
+    </style>
+</resources>

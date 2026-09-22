@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_glass_card"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/dialogGameIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imggameicon" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/dialogGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Name"
+        android:textColor="#D4AF37"
+        android:textSize="22sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginBottom="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40B0C4DE"
+        android:layout_marginBottom="16dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:layout_marginBottom="24dp">
+
+        <TableRow android:layout_marginBottom="12dp">
+            <TextView
+                android:text="Bet Limits:  "
+                android:textColor="#B0C4DE"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_bold"/>
+            <TextView
+                android:id="@+id/dialogLimits"
+                android:text="10 - 1000 FUN"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="14sp"/>
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="12dp">
+            <TextView
+                android:text="Risk Level:  "
+                android:textColor="#B0C4DE"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_bold"/>
+            <TextView
+                android:id="@+id/dialogRisk"
+                android:text="High"
+                android:textColor="#FF4D4D"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="14sp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Jackpot:  "
+                android:textColor="#B0C4DE"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_bold"/>
+            <TextView
+                android:id="@+id/dialogJackpot"
+                android:text="50.000 FUN"
+                android:textColor="#D4AF37"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="14sp"/>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogClose"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            app:backgroundTint="#20FFFFFF"
+            app:strokeColor="#40B0C4DE"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp"
+            android:text="Close"
+            android:textColor="#B0C4DE"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogReview"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            app:backgroundTint="#20FFFFFF"
+            app:strokeColor="#40D4AF37"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp"
+            android:text="REVIEW"
+            android:textColor="#D4AF37"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogPlay"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            app:backgroundTint="#D4AF37"
+            app:cornerRadius="12dp"
+            android:text="PLAY"
+            android:textColor="#0D1B2E"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat_bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
+    </LinearLayout>
+
+</LinearLayout>

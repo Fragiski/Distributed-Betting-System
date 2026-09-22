@@ -1,0 +1,11 @@
+{
+"GameName": "SweetBonanza",
+"ProviderName": "PragmaticPlay",
+"Stars": 4,
+"NoOfVotes": 5600,
+"GameLogo": "GameLogos/sweet_bonanza.png",
+"MinBet": 5.0,
+"MaxBet": 125.0,
+"RiskLevel": "Medium",
+"HashKey": "secret_sweet_456"
+}

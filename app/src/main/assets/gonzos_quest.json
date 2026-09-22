@@ -1,0 +1,11 @@
+{
+"GameName": "GonzosQuest",
+"ProviderName": "NetEnt",
+"Stars": 5,
+"NoOfVotes": 18500,
+"GameLogo": "GameLogos/gonzos_quest.png",
+"MinBet": 0.2,
+"MaxBet": 50.0,
+"RiskLevel": "Low",
+"HashKey": "secret_gonzo_123"
+}

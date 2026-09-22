@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/casino_bg_general"
+        android:alpha="0.15" />
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SETTINGS"
+                android:textColor="#D4AF37"
+                android:textSize="24sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="24dp"
+                android:letterSpacing="0.1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_glass_card"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account Details"
+                    android:textColor="#F0E68C"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginBottom="16dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:textColorHint="#60B0C4DE" app:hintTextColor="#60B0C4DE"
+                    app:startIconTint="#D4AF37"
+                    app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editNewUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Change Username"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:background="@drawable/bg_spinner_field"
+                        android:paddingTop="12dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:textColorHint="#60B0C4DE" app:hintTextColor="#60B0C4DE"
+                    app:startIconTint="#D4AF37"
+                    app:startIconDrawable="@android:drawable/ic_lock_lock"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="#B0C4DE"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editNewPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="New Password"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:background="@drawable/bg_spinner_field"
+                        android:inputType="textPassword"
+                        android:paddingTop="12dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUpdateAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:backgroundTint="#D4AF37"
+                    app:cornerRadius="12dp"
+                    android:text="UPDATE ACCOUNT"
+                    android:textColor="#0D1B2E"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_glass_card"
+                android:padding="20dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preferences"
+                    android:textColor="#F0E68C"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sound Effects"
+                        android:textColor="#B0C4DE"
+                        android:textSize="14sp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/montserrat_regular"/>
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchSounds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:thumbTint="#D4AF37"
+                        app:trackTint="#40B0C4DE"
+                        android:checked="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ambient Music"
+                        android:textColor="#B0C4DE"
+                        android:textSize="14sp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/montserrat_regular"/>
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchMusic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:thumbTint="#D4AF37"
+                        app:trackTint="#40B0C4DE"
+                        android:checked="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeleteAccount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:backgroundTint="#20FF4D4D"
+                app:strokeColor="#FF4D4D"
+                app:strokeWidth="1.5dp"
+                app:cornerRadius="12dp"
+                android:text="DELETE ACCOUNT"
+                android:textColor="#FF4D4D"
+                android:fontFamily="@font/montserrat_bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

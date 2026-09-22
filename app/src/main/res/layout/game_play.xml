@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/casino_bg_general"
+        android:alpha="0.25" />
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CURRENT SESSION"
+            android:textColor="#B0C4DE"
+            android:textSize="12sp"
+            android:letterSpacing="0.2" />
+
+        <TextView
+            android:id="@+id/txtBetGameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Playing: Starburst"
+            android:textColor="#D4AF37"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainBetCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bg_glass_card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select or Enter your Bet"
+            android:textColor="#B0C4DE"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <android.widget.Button
+                android:id="@+id/btnChip10"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_chip_gold"
+                android:text="+10"
+                android:textColor="#0D1B2E"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+
+            <android.widget.Button
+                android:id="@+id/btnChip50"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_chip_gold"
+                android:text="+50"
+                android:textColor="#0D1B2E"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+
+            <android.widget.Button
+                android:id="@+id/btnChip100"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_chip_gold"
+                android:text="+100"
+                android:textColor="#0D1B2E"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="25dp"
+            app:cardBackgroundColor="#26FFFFFF"
+            app:cardElevation="0dp">
+
+            <EditText
+                android:id="@+id/edtBetAmount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="Amount in FUN"
+                android:textColorHint="#60B0C4DE"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="20dp" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBetMin"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                app:backgroundTint="#26FFFFFF"
+                app:cornerRadius="20dp"
+                android:text="MIN (10)"
+                android:textColor="#B0C4DE"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBetDouble"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                app:backgroundTint="#26FFFFFF"
+                app:cornerRadius="20dp"
+                android:text="X2"
+                android:textColor="#B0C4DE"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBetMax"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                app:backgroundTint="#26FFFFFF"
+                app:cornerRadius="20dp"
+                android:text="ALL IN"
+                android:textColor="#FF4D4D"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Good Luck!"
+            android:textColor="#B0C4DE"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlaceBet"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            app:backgroundTint="#D4AF37"
+            app:cornerRadius="26dp"
+            android:text="PLACE BET &amp; PLAY"
+            android:textColor="#0D1B2E"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/transparent"
+        android:text="← Return to Lobby"
+        android:textColor="#B0C4DE"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
