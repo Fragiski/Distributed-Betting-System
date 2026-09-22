@@ -30,28 +30,6 @@ The system consists of the following components, communicating exclusively over 
 - Custom MapReduce implementation
 - Android SDK
 
-## How to Run
-
-1. Open a terminal in the project's `code` folder and compile:
-
-```bash
-javac *.java
-```
-
-2. Start the components in the following order:
-
-```bash
-java SecureRandomGenerator
-java Reducer
-java Master
-java Worker 6001
-java Worker 6002
-java Worker 6003
-java ConsoleClient
-```
-
-Each `Worker` is started with its own port number as an argument, and any number of Workers can be launched this way.
-
 ## Academic context
 
 Developed as a group project for the "Distributed Systems" course, AUEB, Spring Semester 2025-2026.
